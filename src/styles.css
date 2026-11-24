@@ -251,3 +251,23 @@
   animation: wave 0.9s ease-in-out infinite;
   transform-origin: center;
 }
+
+@keyframes door-pulse {
+  0% { box-shadow: 0 0 0 0 oklch(0.689 0.2 134.8 / 55%); }
+  70% { box-shadow: 0 0 0 22px oklch(0.689 0.2 134.8 / 0%); }
+  100% { box-shadow: 0 0 0 0 oklch(0.689 0.2 134.8 / 0%); }
+}
+
+@utility animate-door-pulse {
+  animation: door-pulse 1.4s ease-out infinite;
+}
+
+@keyframes shutter {
+  0% { opacity: 0; }
+  20% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+@utility animate-shutter {
+  animation: shutter 0.5s ease-out both;
+}
