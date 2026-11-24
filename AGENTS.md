@@ -28,3 +28,8 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+- App shell (header, bottom dock nav, toaster) lives in `src/routes/__root.tsx`; each tab is its own route file. Why: one layout, crawlable per-tab URLs.
+- Feature UI lives in `src/components/vilar/`, mock data in `src/data/mock.ts`. Why: swap mock data for real sources without touching components.
+- Theme is a `.dark` class on `<html>` set by an inline head script from localStorage. Why: avoids light/dark flash on load.
