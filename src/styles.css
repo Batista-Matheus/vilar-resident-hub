@@ -241,3 +241,13 @@
 @utility animate-rise-in {
   animation: rise-in 0.45s cubic-bezier(0.2, 0.8, 0.2, 1) both;
 }
+
+@keyframes wave {
+  0%, 100% { transform: scaleY(0.35); }
+  50% { transform: scaleY(1); }
+}
+
+@utility animate-wave {
+  animation: wave 0.9s ease-in-out infinite;
+  transform-origin: center;
+}
