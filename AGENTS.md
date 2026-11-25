@@ -34,3 +34,5 @@ use the editor.
 - Feature UI lives in `src/components/vilar/`, mock data in `src/data/mock.ts`. Why: swap mock data for real sources without touching components.
 - Theme is a `.dark` class on `<html>` set by an inline head script from localStorage. Why: avoids light/dark flash on load.
 - Business rules (filters, translation lookup) are pure functions in `src/lib/*.ts`, tested in `src/test/`. Why: logic stays testable apart from UI.
+
+- OpenLobby courier steps and audit views stay in `src/components/vilar/openlobby/`, with access rules isolated in `src/lib/openlobby.ts`. Why: the local simulation can later be replaced without changing the shared shell.
